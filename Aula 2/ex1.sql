@@ -47,5 +47,6 @@ select tb_classe.nome, tb_classe.nivel, tb_classe.skill, tb_classe.arma as class
 tb_personagem.nome, tb_personagem.ataque, tb_personagem.defesa as personagens
 from  tb_classe inner join tb_personagem on tb_classe.id = tb_personagem.classe_id;
 
-select * from tb_personagem where classe_id = 5;
-
+select tb_personagem.nome, tb_personagem.ataque, tb_personagem.defesa, tb_classe.nome, tb_classe.nivel, tb_classe.skill, tb_classe.arma
+from tb_personagem inner join tb_classe
+on tb_personagem.id = tb_classe.id where tb_classe.id = 5;
